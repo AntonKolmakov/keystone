@@ -6,4 +6,5 @@ tmp/*
 ._*
 .env
 .idea
+test/*
 .DS_Store
