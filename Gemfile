@@ -10,6 +10,7 @@ gem 'uglifier'
 gem 'coffee-rails'
 gem 'jquery-rails'
 gem 'jbuilder'
+gem 'bootstrap-sass'
 
 # Gems for easy developing
 gem 'devise'
