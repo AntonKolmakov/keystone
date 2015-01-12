@@ -1,3 +1,8 @@
-- products.each do |product|
-  ul
-    li= product.title
+p.lead List of products
+
+#wrapper
+  - products.each do |product|
+    ul
+      li= link_to product.title, product_path(product)
+
+= link_to 'New product', new_product_path

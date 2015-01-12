@@ -6,9 +6,24 @@ head
 = stylesheet_link_tag 'application', media: 'all'
 
 body
+  nav.navbar.navbar-default.navbar-static-top
+    .container
+      = render 'partials/rigester'
   .container
-    = render 'partials/rigester'
-    = render 'partials/sidebar' unless devise_controller?
-    = yield
+    .row
+      .col-md-3
+        p.lead Shop Name
+        .list-group
+          = render 'partials/sidebar' unless devise_controller?
+      .col-md-9
+        = yield
+  .container
+    hr
+    /! Footer
+    footer
+      .row
+        .col-lg-12
+          p Copyright &copy; Your Website 2015
+
 
 = javascript_include_tag 'application'
