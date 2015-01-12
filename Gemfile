@@ -15,7 +15,11 @@ gem 'bootstrap-sass'
 # Gems for easy developing
 gem 'devise'
 gem 'decent_exposure'
+gem 'responders'
 gem 'slim'
+gem 'bootstrap_form'
+gem 'carrierwave'
+gem 'rmagick', :require => 'RMagick'
 
 group :development do
   gem 'spring'
