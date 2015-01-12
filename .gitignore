@@ -7,4 +7,5 @@ tmp/*
 .env
 .idea
 test/*
+public/uploads/*
 .DS_Store
