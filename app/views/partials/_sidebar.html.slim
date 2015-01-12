@@ -1,5 +1,5 @@
 #submenu
-  - categories.each do |category|
-    ul
-      li= link_to 'All', root_path
+  ul
+    li= link_to 'All', root_path
+    - categories.each do |category|
       li= link_to category.name, root_path(category: category)
