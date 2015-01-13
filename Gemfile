@@ -6,13 +6,15 @@ gem 'pg'
 
 # Asset gems
 gem 'sass-rails'
+gem 'bootstrap-sass'
+gem 'autoprefixer-rails'
 gem 'uglifier'
 gem 'coffee-rails'
 gem 'jquery-rails'
 gem 'jbuilder'
-gem 'bootstrap-sass'
 
 # Gems for easy developing
+gem 'seedbank' # For envirnoment-specific seeds
 gem 'devise'
 gem 'decent_exposure'
 gem 'responders'
