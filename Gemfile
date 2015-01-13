@@ -1,5 +1,8 @@
 source 'https://rubygems.org'
 
+# Specify ruby version for Heroku
+ruby '2.1.2'
+
 # Core gems
 gem 'rails'
 gem 'pg'
@@ -31,3 +34,5 @@ group :development, :test do
   gem 'dotenv-rails'
   gem 'pry-byebug'
 end
+
+gem 'rails_12factor', group: :production
