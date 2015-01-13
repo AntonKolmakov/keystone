@@ -4,3 +4,4 @@
   = f.collection_select :category_id, Category.order(:name), :id, :name
   = f.file_field :image, label: "Image"
   = f.submit
+  = link_to 'Cancel', root_path

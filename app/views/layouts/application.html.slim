@@ -8,7 +8,12 @@ head
 body
   nav.navbar.navbar-default.navbar-static-top
     .container
-      = render 'partials/rigester'
+      .row
+        .col-md-8
+          - if user_signed_in? && current_user.admin?
+            = render 'partials/admin_tools'
+        .col-md-4
+          = render 'partials/rigester'
   .container
     .row
       .col-md-3

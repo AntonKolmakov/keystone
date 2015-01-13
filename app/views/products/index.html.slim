@@ -1,8 +1,5 @@
 p.lead List of products
 
-#wrapper
-  - products.each do |product|
-    ul
-      li= link_to product.title, product_path(product)
-
-= link_to 'New product', new_product_path
+- products.each do |product|
+  ul.list-unstyled.ui-sortable
+    li= link_to product.title, product_path(product)
