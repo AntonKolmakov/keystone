@@ -1,3 +1,10 @@
 == README
 
 This file describes test task from Keyston company.
+
+App deploy on Heroku http://onstore.herokuapp.com
+
+with credentials for admin:
+
+email:    admin@example.com
+password: 12345678
