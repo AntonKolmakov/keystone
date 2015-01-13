@@ -3,4 +3,5 @@ ul.list-unstyled.ui-sortable
   - categories.each do |category|
     li
       = link_to category.name, root_path(category: category)
-      = link_to 'edit', edit_category_path(category), class: 'btn-mini btn-primary'
+      - if user_signed_in? && current_user.admin?
+        = link_to 'edit', edit_category_path(category), class: 'btn-mini btn-primary'
