@@ -6,6 +6,7 @@ ruby '2.1.2'
 # Core gems
 gem 'rails'
 gem 'pg'
+gem 'unicorn'
 
 # Asset gems
 gem 'sass-rails'
