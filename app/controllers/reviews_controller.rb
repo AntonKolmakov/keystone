@@ -3,13 +3,15 @@ class ReviewsController < ApplicationController
 
   expose(:product) { Product.find(params[:product_id]) }
   expose(:review)
+  expose(:categories)
+  expose(:reviews) { product.reviews(true) }
 
   def create
     review = product.reviews.build(review_params.merge!(user: current_user))
     if review.save
       redirect_to product
     else
-      render "product/show"
+      render "products/show"
     end
   end
 

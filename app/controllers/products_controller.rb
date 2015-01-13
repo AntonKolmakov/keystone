@@ -5,6 +5,7 @@ class ProductsController < ApplicationController
   expose(:products) { Product.sortable(params[:category]) }
   expose(:categories)
   expose(:product, attributes: :product_params)
+  expose(:reviews) { product.reviews }
 
   def create
     product.save
