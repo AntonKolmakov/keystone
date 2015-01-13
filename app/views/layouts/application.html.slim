@@ -21,6 +21,7 @@ body
         .list-group
           = render 'partials/sidebar' unless devise_controller?
       .col-md-9
+        = render 'partials/messages'
         = yield
   .container
     hr

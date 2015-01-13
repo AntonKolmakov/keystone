@@ -1,10 +1,9 @@
-.row
-  h2
-    p
-      = product.title
-    = image_tag product.image.url(:default), class: 'picture'
+h2
   p
-    = product.description
+    = product.title
+  = image_tag product.image.url(:default), class: 'picture'
+p
+  = product.description
 
 hr
   h4
@@ -17,10 +16,10 @@ hr
       = f.text_area :msg, rows: 5, placeholder: "write some...", label: "Write Review"
       = f.submit "Submit"
 
-h4 Feedbacks (#{product.reviews.count})
+h4 Feedbacks (#{reviews.count})
 
 ul.list-unstyled.ui-sortable
-  - product.reviews.each do |review|
+  - reviews.each do |review|
     li= review.msg
     p
       | by #{review.user.email}
