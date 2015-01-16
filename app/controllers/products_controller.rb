@@ -4,8 +4,13 @@ class ProductsController < ApplicationController
 
   expose(:products) { Product.sortable(params[:category]) }
   expose(:categories)
-  expose(:product, attributes: :product_params)
   expose(:reviews) { product.reviews }
+  expose(:product, attributes: :product_params)
+  expose(:review)
+
+  def show
+    self.review = product.reviews.build
+  end
 
   def create
     product.save

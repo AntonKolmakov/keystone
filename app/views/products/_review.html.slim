@@ -1,0 +1,5 @@
+= bootstrap_form_for ([product, review]) do |f|
+  .row
+    .col-sm-8
+      = f.text_area :msg, rows: 5, placeholder: "write some...", label: "Write Review"
+      = f.submit "Submit"

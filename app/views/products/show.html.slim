@@ -10,22 +10,19 @@ hr
    p
     | Leave your feedback for this product
 
-= bootstrap_form_for ([product, Review.new]) do |f|
-  .row
-    .col-sm-8
-      = f.text_area :msg, rows: 5, placeholder: "write some...", label: "Write Review"
-      = f.submit "Submit"
+= render 'products/review'
 
 h4 Feedbacks (#{reviews.count})
 
 ul.list-unstyled.ui-sortable
   - reviews.each do |review|
-    li= review.msg
-    p
-      | by #{review.user.email}
-      - if user_signed_in? && current_user.admin?
-        = link_to 'Delete', product_review_path(product, review), method: :delete, data: { confirm: 'A u sure?' },
-                  class: 'btn-mini btn-danger'
+    - if review.persisted?
+      li= review.msg
+      p
+        | by #{review.user.email}
+        - if user_signed_in? && current_user.admin?
+          = link_to 'Delete', product_review_path(product, review), method: :delete, data: { confirm: 'A u sure?' },
+                    class: 'btn-mini btn-danger'
 
 - if user_signed_in? && current_user.admin?
   = link_to 'Edit', edit_product_path(product)

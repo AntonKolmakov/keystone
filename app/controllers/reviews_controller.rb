@@ -2,12 +2,11 @@ class ReviewsController < ApplicationController
   before_action :authenticate_user!
 
   expose(:product) { Product.find(params[:product_id]) }
-  expose(:review)
+  expose(:review, attributes: :review_params)
   expose(:categories)
-  expose(:reviews) { product.reviews(true) }
+  expose(:reviews) { product.reviews }
 
   def create
-    review = product.reviews.build(review_params.merge!(user: current_user))
     if review.save
       redirect_to product
     else
@@ -23,6 +22,6 @@ class ReviewsController < ApplicationController
   private
 
   def review_params
-    params.require(:review).permit(:msg)
+    params.require(:review).permit(:msg).merge!(user: current_user)
   end
 end
