@@ -29,6 +29,7 @@ gem 'rmagick', :require => 'RMagick'
 
 group :development do
   gem 'spring'
+  gem 'foreman'
 end
 
 group :development, :test do
@@ -36,6 +37,7 @@ group :development, :test do
   gem 'factory_girl_rails'
   gem 'pry-byebug'
   gem 'faker'
+  gem 'launchy'
 end
 
 group :test do
