@@ -8,8 +8,8 @@ defaults: &defaults
 
 development_defaults: &development_defaults
   <<: *defaults
-  user: <%= ENV['DB_USER'] %>
-  password: <%= ENV['DB_PASSWORD'] %>
+  user: <%= ENV['DB_USER'] || 'Valentina' %>
+  password: <%= ENV['DB_PASSWORD' || ''] %>
   host: localhost
 
 development:

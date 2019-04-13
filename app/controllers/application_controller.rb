@@ -6,10 +6,6 @@ class ApplicationController < ActionController::Base
 
   protected
 
-  decent_configuration do
-    strategy DecentExposure::StrongParametersStrategy
-  end
-
   def require_admin
     redirect_to root_path unless current_user.admin?
   end

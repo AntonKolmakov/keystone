@@ -1,5 +1,5 @@
 def admin_session_sign_in(user = nil)
-  user ||= FactoryGirl.create(:admin)
+  user ||= FactoryBot.create(:admin)
 
   visit '/users/sign_in'
 

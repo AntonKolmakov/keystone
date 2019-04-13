@@ -2,8 +2,8 @@ class CategoriesController < ApplicationController
   before_action :authenticate_user!
   before_action :require_admin
 
-  expose(:category, attributes: :category_params)
-  expose(:categories)
+  expose :category
+  expose :categories, ->{ Category.all }
 
   def create
     category.save

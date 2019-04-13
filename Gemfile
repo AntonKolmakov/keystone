@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 # Specify ruby version for Heroku
-ruby '2.1.2'
+ruby '2.3.7'
 
 # Core gems
 gem 'rails'
@@ -34,7 +34,7 @@ end
 
 group :development, :test do
   gem 'dotenv-rails'
-  gem 'factory_girl_rails'
+  gem 'factory_bot_rails'
   gem 'pry-byebug'
   gem 'faker'
   gem 'launchy'
@@ -47,3 +47,4 @@ group :test do
 end
 
 gem 'rails_12factor', group: :production
+gem "byebug", "~> 11.0", :groups => [:development, :test]
